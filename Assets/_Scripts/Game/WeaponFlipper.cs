@@ -9,7 +9,7 @@ namespace _Scripts.Game
     [RequireComponent(typeof(Rigidbody))]
     public class WeaponFlipper : MonoBehaviour
     {
-        [SerializeField] private float _flipForce;
+        [SerializeField] private Vector3 _movementDirection;
         private IInputService _inputService;
         private Rigidbody _rb;
 
@@ -34,8 +34,16 @@ namespace _Scripts.Game
         private void Flip()
         {
             _rb.isKinematic = false;
-            _rb.velocity = new Vector3(0, 8, 4);
-            _rb.AddRelativeTorque(new Vector3(90,0, 0), ForceMode.Impulse);
+            _rb.velocity = _movementDirection;
+            transform.DOLocalRotate(new Vector3(360, 0, 0), 1, RotateMode.LocalAxisAdd);
+        }
+
+        private void OnTriggerEnter(Collider other)
+        {
+            if (other.gameObject.layer == 9)
+            {
+                Debug.Log("hel");
+            }
         }
     }
 }
