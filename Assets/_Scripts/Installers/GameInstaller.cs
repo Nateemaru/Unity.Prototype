@@ -1,6 +1,7 @@
 using _Scripts.Services;
 using _Scripts.Services.CoroutineRunner;
 using _Scripts.Services.Database;
+using _Scripts.Services.InputService;
 using _Scripts.Services.PauseHandlerService;
 using _Scripts.Services.SceneLoadService;
 using _Scripts.StateMachines;
@@ -22,6 +23,17 @@ namespace _Scripts.Installers
             BindDataReader();
             BindSceneLoadService();
             BindPauseHandler();
+            BindInputService();
+        }
+
+        private void BindInputService()
+        {
+            Container
+                .Bind<IInputService>()
+                .To<InputService>()
+                .FromNewComponentOnNewGameObject()
+                .AsSingle()
+                .NonLazy();
         }
 
         private void BindPauseHandler()
