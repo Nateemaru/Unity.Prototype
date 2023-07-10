@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1621934849551195267
+--- !u!1 &1336529333995664287
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 2942266965151695875}
-  - component: {fileID: 457832516274963476}
-  - component: {fileID: 2276544980121825488}
-  - component: {fileID: 4460655999041719595}
+  - component: {fileID: 4539268157265502139}
+  - component: {fileID: 8190015692407080225}
+  - component: {fileID: 6127904633915348818}
+  - component: {fileID: 3171830913343699499}
+  - component: {fileID: 1863785184615886054}
   m_Layer: 6
-  m_Name: SlicableWoodLog
+  m_Name: SlicableDarkBrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &2942266965151695875
+--- !u!4 &4539268157265502139
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621934849551195267}
-  m_LocalRotation: {x: -0.6678399, y: 0.23235726, z: 0.23235728, w: 0.6678399}
-  m_LocalPosition: {x: 0, y: 0, z: 6}
-  m_LocalScale: {x: 100, y: 100, z: 100}
-  m_ConstrainProportionsScale: 1
+  m_GameObject: {fileID: 1336529333995664287}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1.5, y: 0.4, z: 0.75}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 0
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &457832516274963476
+--- !u!33 &8190015692407080225
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621934849551195267}
-  m_Mesh: {fileID: 1441757293723600657, guid: 4c9844117907c6c468e58d8ab2161d09, type: 3}
---- !u!23 &2276544980121825488
+  m_GameObject: {fileID: 1336529333995664287}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6127904633915348818
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621934849551195267}
+  m_GameObject: {fileID: 1336529333995664287}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,8 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f9448ca5efa8bad4082561ef1c6fa715, type: 2}
-  - {fileID: 2100000, guid: bcf22c42359b9bc47b07dca329a6d735, type: 2}
+  - {fileID: 2100000, guid: 437eb1d891d7e234dac8934f1b6b2432, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &4460655999041719595
+--- !u!114 &3171830913343699499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1621934849551195267}
+  m_GameObject: {fileID: 1336529333995664287}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
@@ -100,15 +100,15 @@ MonoBehaviour:
   initialization: 1
   simulationType: 2
   objectType: 0
-  demolitionType: 1
+  demolitionType: 3
   physics:
     materialType: 0
     material: {fileID: 0}
-    massBy: 0
+    massBy: 1
     mass: 1
-    colliderType: 0
+    colliderType: 1
     planarCheck: 1
-    ignoreNear: 0
+    ignoreNear: 1
     useGravity: 1
     solverIterations: 6
     dampening: 0.7
@@ -131,14 +131,14 @@ MonoBehaviour:
     byConnectivity: 0
     unyielding: 0
     activatable: 0
-    l: 0
-    layer: 0
+    l: 1
+    layer: 8
     connect: {fileID: 0}
   limitations:
-    byCollision: 1
+    byCollision: 0
     solidity: 0.1
     tag: Untagged
-    depth: 7
+    depth: 0
     time: 0.2
     size: 0.1
     visible: 0
@@ -149,19 +149,19 @@ MonoBehaviour:
   meshDemolition:
     amount: 2
     variation: 0
-    depthFade: 0.5
-    contactBias: 0
-    seed: 1
+    depthFade: 1
+    contactBias: 1
+    seed: 0
     useShatter: 0
     addChildren: 1
     clusterize: 0
     simType: 4
-    meshInput: 9
+    meshInput: 3
     properties:
-      colliderType: 0
+      colliderType: 1
       sizeFilter: 0
       decompose: 0
-      removeCollinear: 1
+      removeCollinear: 0
       l: 1
       m: 0
       layer: 0
@@ -181,7 +181,7 @@ MonoBehaviour:
     connectivity: 0
     minimumArea: 0
     minimumSize: 0
-    percentage: 0
+    percentage: 100
     seed: 0
     type: 0
     ratio: 15
@@ -245,7 +245,7 @@ MonoBehaviour:
     toShards: 1
   fading:
     onDemolition: 1
-    onActivation: 1
+    onActivation: 0
     byOffset: 0
     lifeType: 4
     lifeTime: 7
@@ -253,14 +253,14 @@ MonoBehaviour:
     fadeType: 0
     fadeTime: 5
     sizeFilter: 0
-    shardAmount: 5
+    shardAmount: 0
   reset:
     transform: 1
     damage: 1
     connectivity: 0
-    action: 0
-    destroyDelay: 0
-    mesh: 4
+    action: 1
+    destroyDelay: 1
+    mesh: 0
     fragments: 0
   initialized: 0
   corState: 0
@@ -280,3 +280,16 @@ MonoBehaviour:
   dustList: []
   restriction: {fileID: 0}
   sound: {fileID: 0}
+--- !u!114 &1863785184615886054
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336529333995664287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb476375abd748e8b04925c9870a72b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _materialsConfig: {fileID: 11400000, guid: 6c5825ec24ac2fa408af0d5ec933267a, type: 2}

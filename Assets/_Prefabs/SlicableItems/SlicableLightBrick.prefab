@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &3303194765178454743
+--- !u!1 &1336529333995664287
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,47 +8,48 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4432942937744152054}
-  - component: {fileID: 7226321467630566639}
-  - component: {fileID: 7986220667202208619}
-  - component: {fileID: 7607334260806983632}
+  - component: {fileID: 4539268157265502139}
+  - component: {fileID: 8190015692407080225}
+  - component: {fileID: 6127904633915348818}
+  - component: {fileID: 3171830913343699499}
+  - component: {fileID: -6199376638494337848}
   m_Layer: 6
-  m_Name: SlicableApple
+  m_Name: SlicableLightBrick
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4432942937744152054
+--- !u!4 &4539268157265502139
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303194765178454743}
+  m_GameObject: {fileID: 1336529333995664287}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.006, y: 0.006, z: 0.006}
-  m_ConstrainProportionsScale: 1
+  m_LocalScale: {x: 1.5, y: 0.4, z: 0.75}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 5
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &7226321467630566639
+--- !u!33 &8190015692407080225
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303194765178454743}
-  m_Mesh: {fileID: -2432090755550338912, guid: 3dfe46612aed193489b4be98efd4f04b, type: 3}
---- !u!23 &7986220667202208619
+  m_GameObject: {fileID: 1336529333995664287}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &6127904633915348818
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303194765178454743}
+  m_GameObject: {fileID: 1336529333995664287}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -62,8 +63,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: d493577a409acfc4d8a91ce836ce7a17, type: 2}
-  - {fileID: 2100000, guid: a7d49bdf8f02065499ef3add8eee467f, type: 2}
+  - {fileID: 2100000, guid: 27c9046de311c024298f9c82b7962a9d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +85,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &7607334260806983632
+--- !u!114 &3171830913343699499
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3303194765178454743}
+  m_GameObject: {fileID: 1336529333995664287}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
@@ -106,7 +106,7 @@ MonoBehaviour:
     material: {fileID: 0}
     massBy: 1
     mass: 1
-    colliderType: 2
+    colliderType: 1
     planarCheck: 1
     ignoreNear: 1
     useGravity: 1
@@ -158,7 +158,7 @@ MonoBehaviour:
     simType: 4
     meshInput: 3
     properties:
-      colliderType: 0
+      colliderType: 1
       sizeFilter: 0
       decompose: 0
       removeCollinear: 0
@@ -280,3 +280,16 @@ MonoBehaviour:
   dustList: []
   restriction: {fileID: 0}
   sound: {fileID: 0}
+--- !u!114 &-6199376638494337848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1336529333995664287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: eb476375abd748e8b04925c9870a72b9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _materialsConfig: {fileID: 11400000, guid: 6c5825ec24ac2fa408af0d5ec933267a, type: 2}
