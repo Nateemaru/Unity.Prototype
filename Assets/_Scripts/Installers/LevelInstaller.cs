@@ -14,27 +14,18 @@ namespace _Scripts.Installers
         {
             BindFactories();
             BindLevelStateMachine();
-            BindWeaponControllerInterfaces();
+            BindPlayerInterfaces();
         }
 
-        private void BindWeaponControllerInterfaces()
+        private void BindPlayerInterfaces()
         {
             Container
-                .Bind<IFlippable>()
-                .To<WeaponController>()
+                .BindInterfacesAndSelfTo<PlayerController>()
                 .FromComponentsInHierarchy()
-                .WhenInjectedInto(new []
+                .WhenInjectedInto(new[]
                 {
-                    typeof(KnifeHandle)
-                });
-            
-            Container
-                .Bind<IStuckable>()
-                .To<WeaponController>()
-                .FromComponentsInHierarchy()
-                .WhenInjectedInto(new []
-                {
-                    typeof(StuckChecker)
+                    typeof(KnifeHandle),
+                    typeof(StuckChecker),
                 });
         }
 

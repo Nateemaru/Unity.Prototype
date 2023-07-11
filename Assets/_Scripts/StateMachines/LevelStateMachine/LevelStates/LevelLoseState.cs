@@ -10,7 +10,11 @@ namespace _Scripts.StateMachines.LevelStateMachine.LevelStates
         {
             _levelStateMachine = levelStateMachine;
         }
-        
+
+        public void Enter()
+        {
+        }
+
         public class Factory : PlaceholderFactory<IStateMachine, LevelLoseState>
         {
         }
