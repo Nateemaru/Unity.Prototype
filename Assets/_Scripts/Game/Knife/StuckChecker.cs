@@ -1,28 +1,23 @@
 using DG.Tweening;
 using UnityEngine;
+using Zenject;
 
 namespace _Scripts.Game.Knife
 {
     public class StuckChecker : MonoBehaviour
     {
-        [SerializeField] private Rigidbody _parentRigidbody;
+        private IStuckable _stuckableTarget;
 
-        private void Start()
+        [Inject]
+        private void Construct(IStuckable stuckable)
         {
-            if(!_parentRigidbody)
-            {
-                if (transform.parent.TryGetComponent(out Rigidbody parentRigidbody))
-                    _parentRigidbody = parentRigidbody;
-            }
+            _stuckableTarget = stuckable;
         }
 
         private void OnTriggerEnter(Collider other)
         {
             if (other.gameObject.layer == 9)
-            {
-                _parentRigidbody.isKinematic = true;
-                _parentRigidbody.transform.DOKill();
-            }
+                _stuckableTarget.TryToStuck();
         }
     }
 }

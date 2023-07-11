@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1336529333995664287
+--- !u!1 &8970840511685507402
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,48 +8,47 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 4539268157265502139}
-  - component: {fileID: 8190015692407080225}
-  - component: {fileID: 6127904633915348818}
-  - component: {fileID: 3171830913343699499}
-  - component: {fileID: 1863785184615886054}
+  - component: {fileID: 5348597075459664902}
+  - component: {fileID: 1705452976442688282}
+  - component: {fileID: 7384094525089362287}
+  - component: {fileID: 7246105802219361566}
   m_Layer: 6
-  m_Name: SlicableDarkBrick
+  m_Name: SlicableEmoji
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4539268157265502139
+--- !u!4 &5348597075459664902
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336529333995664287}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_GameObject: {fileID: 8970840511685507402}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1.5, y: 0.4, z: 0.75}
+  m_LocalScale: {x: 2, y: 2, z: 2}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: -1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!33 &8190015692407080225
+--- !u!33 &1705452976442688282
 MeshFilter:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336529333995664287}
-  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
---- !u!23 &6127904633915348818
+  m_GameObject: {fileID: 8970840511685507402}
+  m_Mesh: {fileID: 10207, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!23 &7384094525089362287
 MeshRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336529333995664287}
+  m_GameObject: {fileID: 8970840511685507402}
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
@@ -63,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 437eb1d891d7e234dac8934f1b6b2432, type: 2}
+  - {fileID: 2100000, guid: 138741ac7da55f047b8abecec42a0ab6, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -85,13 +84,13 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!114 &3171830913343699499
+--- !u!114 &7246105802219361566
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336529333995664287}
+  m_GameObject: {fileID: 8970840511685507402}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: eb6e52f37bca2404fac00b69fd8d21f8, type: 3}
@@ -100,13 +99,13 @@ MonoBehaviour:
   initialization: 1
   simulationType: 2
   objectType: 0
-  demolitionType: 2
+  demolitionType: 3
   physics:
     materialType: 0
     material: {fileID: 0}
     massBy: 1
     mass: 1
-    colliderType: 1
+    colliderType: 2
     planarCheck: 1
     ignoreNear: 1
     useGravity: 1
@@ -158,7 +157,7 @@ MonoBehaviour:
     simType: 4
     meshInput: 3
     properties:
-      colliderType: 1
+      colliderType: 0
       sizeFilter: 0
       decompose: 0
       removeCollinear: 0
@@ -232,7 +231,7 @@ MonoBehaviour:
     inheritScale: 1
     inheritMaterials: 0
   materials:
-    innerMaterial: {fileID: 0}
+    innerMaterial: {fileID: 2100000, guid: e2774375f7a8efd45aa570ebf0c5d93b, type: 2}
     mappingScale: 0.1
     outerMaterial: {fileID: 0}
     needNewMat: 0
@@ -280,16 +279,3 @@ MonoBehaviour:
   dustList: []
   restriction: {fileID: 0}
   sound: {fileID: 0}
---- !u!114 &1863785184615886054
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1336529333995664287}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: eb476375abd748e8b04925c9870a72b9, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  _materialsConfig: {fileID: 11400000, guid: 6c5825ec24ac2fa408af0d5ec933267a, type: 2}

@@ -7,12 +7,16 @@
     <list default="true" id="c4908b18-6ee1-4a9a-aa18-d32c162b1b85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity.Prototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity.Prototype/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/HandleArea.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/HandleArea.cs.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/StuckChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/StuckChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Materials/FlipItem.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Materials/FlipItem.physicMaterial" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableDarkBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableDarkBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableLightBrick.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableLightBrick.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponController.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/RandomColorizer.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Colorizers/RandomSlicableInnerPartColorizer.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/RandomColorizer.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Colorizers/RandomSlicableInnerPartColorizer.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Installers/LevelInstaller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Installers/LevelInstaller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -105,7 +109,7 @@
       <workItem from="1688912836859" duration="5307000" />
       <workItem from="1688971021147" duration="12476000" />
       <workItem from="1689002158440" duration="7964000" />
-      <workItem from="1689064128696" duration="8804000" />
+      <workItem from="1689064128696" duration="19239000" />
     </task>
     <servers />
   </component>

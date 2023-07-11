@@ -1,4 +1,5 @@
 using _Scripts.Factories;
+using _Scripts.Game.Knife;
 using _Scripts.StateMachines;
 using _Scripts.StateMachines.LevelStateMachine;
 using _Scripts.StateMachines.LevelStateMachine.LevelStates;
@@ -13,6 +14,28 @@ namespace _Scripts.Installers
         {
             BindFactories();
             BindLevelStateMachine();
+            BindWeaponControllerInterfaces();
+        }
+
+        private void BindWeaponControllerInterfaces()
+        {
+            Container
+                .Bind<IFlippable>()
+                .To<WeaponController>()
+                .FromComponentsInHierarchy()
+                .WhenInjectedInto(new []
+                {
+                    typeof(KnifeHandle)
+                });
+            
+            Container
+                .Bind<IStuckable>()
+                .To<WeaponController>()
+                .FromComponentsInHierarchy()
+                .WhenInjectedInto(new []
+                {
+                    typeof(StuckChecker)
+                });
         }
 
         private void BindFactories()

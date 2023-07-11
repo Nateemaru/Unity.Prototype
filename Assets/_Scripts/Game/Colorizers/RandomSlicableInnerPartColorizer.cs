@@ -2,10 +2,10 @@ using _Scripts.SO;
 using RayFire;
 using UnityEngine;
 
-namespace _Scripts.Game
+namespace _Scripts.Game.Colorizers
 {
     [RequireComponent(typeof(RayfireRigid))]
-    public class RandomColorizer : MonoBehaviour
+    public class RandomSlicableInnerPartColorizer : MonoBehaviour
     {
         [SerializeField] private ColorMaterialsConfig _materialsConfig;
         private RayfireRigid _rayfireRigid;
