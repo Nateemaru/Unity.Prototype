@@ -2550,9 +2550,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   m_BindingMode: 4
   m_FollowOffset: {x: 6, y: 1.5, z: -3.5}
-  m_XDamping: 1
-  m_YDamping: 1
-  m_ZDamping: 1
+  m_XDamping: 0.5
+  m_YDamping: 0.5
+  m_ZDamping: 0.5
   m_AngularDampingMode: 0
   m_PitchDamping: 0
   m_YawDamping: 0
@@ -2843,7 +2843,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7470400282049625649}
-  m_LocalRotation: {x: 0.98045325, y: -0, z: -0, w: -0.19675216}
+  m_LocalRotation: {x: 0.9741768, y: -0, z: -0, w: -0.22578652}
   m_LocalPosition: {x: 0, y: -1.02, z: -1.42}
   m_LocalScale: {x: 4, y: 4, z: 4}
   m_ConstrainProportionsScale: 0
@@ -2853,7 +2853,7 @@ Transform:
   - {fileID: 1585393319}
   m_Father: {fileID: 769237048}
   m_RootOrder: -1
-  m_LocalEulerAnglesHint: {x: 202.694, y: 0, z: 0}
+  m_LocalEulerAnglesHint: {x: 206.09799, y: 0, z: 0}
 --- !u!1 &7470400282049625649
 GameObject:
   m_ObjectHideFlags: 0
@@ -3000,7 +3000,7 @@ Rigidbody:
   m_ImplicitCom: 1
   m_ImplicitTensor: 1
   m_UseGravity: 1
-  m_IsKinematic: 0
+  m_IsKinematic: 1
   m_Interpolate: 0
   m_Constraints: 98
   m_CollisionDetection: 0
@@ -3016,5 +3016,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c6cb6851576678a4fa19c7247d37cee6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _movementDirection: {x: 0, y: 8, z: 4}
-  _flipForce: 1
+  _movementDirection: {x: 0, y: 8, z: 3}
+  _flipForce: 7

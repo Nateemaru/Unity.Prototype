@@ -6,24 +6,13 @@
   <component name="ChangeListManager">
     <list default="true" id="c4908b18-6ee1-4a9a-aa18-d32c162b1b85" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Unity.Prototype/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Unity.Prototype/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RayFire/Tutorial/Material/glass.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RayFire/Tutorial/Material/glass.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/RayFire/Tutorial/Material/ice.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/RayFire/Tutorial/Material/ice.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield 1.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield 1.mat" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Plugins/Zenject/OptionalExtras/SampleGame1 (Beginner)/Media/Textures/Background/Materials/Free_Shmup_Sprites_Starfield.mat" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Game.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Game.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Meterials/FlipItem.physicMaterial" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Meterials/FlipItem.physicMaterial" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/LightWood.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/LightWood.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/Wood.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/Wood.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/WoodLog.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Models/Wood Log/WoodLog.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableApple.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableApple.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableWoodLog.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Prefabs/SlicableItems/SlicableWoodLog.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/DynamicsManager.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/HandleArea.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/HandleArea.cs.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/StuckChecker.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/StuckChecker.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/StuckChecker.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/_Scripts/Game/WeaponFlipper.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/_Scripts/Game/Knife/WeaponFlipper.cs.meta" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -52,6 +41,7 @@
     "node.js.detected.package.tslint": "true",
     "node.js.selected.package.eslint": "(autodetect)",
     "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
     "settings.editor.selected.configurable": "preferences.sourceCode.C#",
     "vue.rearranger.settings.migration": "true"
   },
@@ -114,7 +104,8 @@
       <workItem from="1688888018511" duration="8921000" />
       <workItem from="1688912836859" duration="5307000" />
       <workItem from="1688971021147" duration="12476000" />
-      <workItem from="1689002158440" duration="964000" />
+      <workItem from="1689002158440" duration="7964000" />
+      <workItem from="1689064128696" duration="8804000" />
     </task>
     <servers />
   </component>

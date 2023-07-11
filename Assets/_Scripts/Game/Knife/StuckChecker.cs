@@ -1,11 +1,11 @@
+using DG.Tweening;
 using UnityEngine;
 
-namespace _Scripts.Game
+namespace _Scripts.Game.Knife
 {
-    public class HandleArea : MonoBehaviour
+    public class StuckChecker : MonoBehaviour
     {
         [SerializeField] private Rigidbody _parentRigidbody;
-        [SerializeField] private float _ricochetForce;
 
         private void Start()
         {
@@ -20,8 +20,8 @@ namespace _Scripts.Game
         {
             if (other.gameObject.layer == 9)
             {
-                _parentRigidbody.isKinematic = false;
-                _parentRigidbody.AddForce(Vector3.back * _ricochetForce, ForceMode.Impulse);
+                _parentRigidbody.isKinematic = true;
+                _parentRigidbody.transform.DOKill();
             }
         }
     }
