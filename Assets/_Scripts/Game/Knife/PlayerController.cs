@@ -14,6 +14,7 @@ namespace _Scripts.Game.Knife
         private IInputService _inputService;
         private Rigidbody _rb;
         private bool _canStuck = true;
+        private bool _canFlip = true;
 
         [Inject]
         private void Construct(IInputService inputService)
@@ -62,8 +63,14 @@ namespace _Scripts.Game.Knife
         private bool IsLookingAtForward() => Vector3.Angle(transform.up, Vector3.up) < 30f;
 
         private void ResetGroundPosition() => _rb.angularVelocity = new Vector3(0.5f, 0, 0);
-        
-        private void DisableStucking() => _canStuck = true;
+
+        private void EnableStucking() => _canStuck = true;
+
+        private void FreezeStucking()
+        {
+            _canStuck = false;
+            Invoke(nameof(EnableStucking), 0.4f);
+        }
 
         public void TryToStuck()
         {
@@ -71,28 +78,39 @@ namespace _Scripts.Game.Knife
                 _rb.isKinematic = true;
         }
 
+        private void ResetRigidbody(Vector3 velocity, Vector3 angularVecolity)
+        {
+            _rb.isKinematic = false;
+            _rb.angularVelocity = angularVecolity;
+            _rb.velocity = velocity;
+        }
+
         public void Flip()
         {
-            _canStuck = false;
-            _rb.isKinematic = false;
-            _rb.angularVelocity = Vector3.zero;
-            _rb.velocity = _movementDirection;
-            _rb.AddTorque(transform.right * _flipForce, ForceMode.VelocityChange);
-            Invoke(nameof(DisableStucking), 0.4f);
+            if (_canFlip)
+            {
+                ResetRigidbody(_movementDirection, Vector3.zero);
+                _rb.AddTorque(transform.right * _flipForce, ForceMode.VelocityChange);
+                FreezeStucking();
+            }
         }
         
         public void BackFlip()
         {
-            _rb.isKinematic = false;
-            _rb.angularVelocity = Vector3.zero;
-            _rb.velocity = new Vector3(0, _movementDirection.y / 2, -_movementDirection.z);
-            _rb.AddTorque(-transform.right * _flipForce, ForceMode.VelocityChange);
+            if (_canFlip)
+            {
+                var backMovement = new Vector3(0, _movementDirection.y / 2, -_movementDirection.z);
+                ResetRigidbody(backMovement, Vector3.zero);
+                _rb.AddTorque(-transform.right * _flipForce, ForceMode.VelocityChange);
+            }
         }
 
         public void Die()
         {
+            _canFlip = false;
             _inputService.OnTouched -= Flip;
-            _rb.isKinematic = false;
+            _rb.useGravity = false;
+            ResetRigidbody(Vector3.zero, Vector3.zero);
             _rb.constraints = RigidbodyConstraints.None;
         }
     }

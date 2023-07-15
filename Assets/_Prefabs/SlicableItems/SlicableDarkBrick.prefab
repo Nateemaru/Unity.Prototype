@@ -33,7 +33,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 5
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &8190015692407080225
 MeshFilter:
@@ -138,8 +138,8 @@ MonoBehaviour:
     byCollision: 0
     solidity: 0.1
     tag: Untagged
-    depth: 0
-    time: 0.2
+    depth: 1
+    time: 0.5
     size: 0.1
     visible: 0
     sliceByBlade: 1
@@ -159,7 +159,7 @@ MonoBehaviour:
     meshInput: 3
     properties:
       colliderType: 1
-      sizeFilter: 0
+      sizeFilter: 0.1
       decompose: 0
       removeCollinear: 0
       l: 1
@@ -171,7 +171,7 @@ MonoBehaviour:
       type: 0
       frames: 3
       fragments: 4
-      skipFirstDemolition: 0
+      skipFirstDemolition: 1
       inProgress: 0
       wasUsed: 0
       stop: 0

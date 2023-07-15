@@ -15,5 +15,10 @@ namespace _Scripts.Tweens
                 .DOMoveY(transform.position.y + _jumpForce, _duration)
                 .SetLoops(-1, LoopType.Yoyo);
         }
+
+        private void OnDisable()
+        {
+            transform.DOKill();
+        }
     }
 }

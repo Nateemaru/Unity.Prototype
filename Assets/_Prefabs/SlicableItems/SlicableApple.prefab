@@ -138,7 +138,7 @@ MonoBehaviour:
     byCollision: 0
     solidity: 0.1
     tag: Untagged
-    depth: 0
+    depth: 1
     time: 0.2
     size: 0.1
     visible: 0
@@ -159,7 +159,7 @@ MonoBehaviour:
     meshInput: 3
     properties:
       colliderType: 0
-      sizeFilter: 0
+      sizeFilter: 0.1
       decompose: 0
       removeCollinear: 0
       l: 1

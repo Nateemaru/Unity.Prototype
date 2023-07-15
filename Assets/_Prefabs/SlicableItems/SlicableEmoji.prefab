@@ -32,7 +32,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: -1
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!33 &1705452976442688282
 MeshFilter:
@@ -62,7 +62,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: 138741ac7da55f047b8abecec42a0ab6, type: 2}
+  - {fileID: 2100000, guid: e7bcd990f17a61440a3999f03d1700bb, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -137,7 +137,7 @@ MonoBehaviour:
     byCollision: 0
     solidity: 0.1
     tag: Untagged
-    depth: 0
+    depth: 1
     time: 0.2
     size: 0.1
     visible: 0
@@ -158,7 +158,7 @@ MonoBehaviour:
     meshInput: 3
     properties:
       colliderType: 0
-      sizeFilter: 0
+      sizeFilter: 0.1
       decompose: 0
       removeCollinear: 0
       l: 1
@@ -231,7 +231,7 @@ MonoBehaviour:
     inheritScale: 1
     inheritMaterials: 0
   materials:
-    innerMaterial: {fileID: 2100000, guid: e2774375f7a8efd45aa570ebf0c5d93b, type: 2}
+    innerMaterial: {fileID: 0}
     mappingScale: 0.1
     outerMaterial: {fileID: 0}
     needNewMat: 0
