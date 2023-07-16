@@ -45,7 +45,7 @@ namespace _Scripts.Game.Knife
         {
             if (IsFalling())
             {
-                if (HasFinishedRotation() && IsLookingAtForward())
+                if (IsLookingAtForward())
                     ResetGroundPosition();
             }
             
@@ -62,9 +62,7 @@ namespace _Scripts.Game.Knife
 
         private bool IsFalling() => _rb.velocity.y < 0;
 
-        private bool HasFinishedRotation() => Math.Abs(transform.rotation.eulerAngles.x - 15.0f) < 5.0f;
-
-        private bool IsLookingAtForward() => Vector3.Angle(transform.up, Vector3.up) < 30f;
+        private bool IsLookingAtForward() => Vector3.Angle(transform.up, Vector3.up) < 15f;
 
         private void ResetGroundPosition() => _rb.angularVelocity = new Vector3(0.5f, 0, 0);
 
@@ -113,7 +111,6 @@ namespace _Scripts.Game.Knife
         public void Die()
         {
             _canFlip = false;
-            _inputService.OnTouched -= Flip;
             _rb.useGravity = false;
             ResetRigidbody(true);
             _rb.constraints = RigidbodyConstraints.None;
