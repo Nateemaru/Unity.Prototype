@@ -113,7 +113,6 @@ namespace _Scripts.Game.Knife
             _canFlip = false;
             _rb.useGravity = false;
             ResetRigidbody(true);
-            _rb.constraints = RigidbodyConstraints.None;
         }
     }
 }
