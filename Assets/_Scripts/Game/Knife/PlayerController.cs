@@ -11,10 +11,12 @@ namespace _Scripts.Game.Knife
         [SerializeField] private Vector3 _movementDirection;
         [SerializeField] private float _flipForce;
         [SerializeField] private Transform _centreOfMassPoint;
+        
         private IInputService _inputService;
         private Rigidbody _rb;
         private bool _canStuck = true;
         private bool _canFlip = true;
+        private Vector3 _backMovement;
 
         [Inject]
         private void Construct(IInputService inputService)
@@ -28,6 +30,8 @@ namespace _Scripts.Game.Knife
             _rb.maxAngularVelocity = Mathf.Infinity;
             _rb.centerOfMass = Vector3.Scale(_centreOfMassPoint.localPosition, transform.localScale);
             _rb.constraints = RigidbodyConstraints.FreezeRotationY | RigidbodyConstraints.FreezeRotationZ;
+            
+            _backMovement = new Vector3(0, _movementDirection.y / 2, -_movementDirection.z);
 
             _inputService.OnTouched += Flip;
         }
@@ -72,24 +76,25 @@ namespace _Scripts.Game.Knife
             Invoke(nameof(EnableStucking), 0.4f);
         }
 
+        private void ResetRigidbody(bool isKinematic = false)
+        {
+            _rb.isKinematic = isKinematic;
+            _rb.angularVelocity = Vector3.zero;
+            _rb.velocity = Vector3.zero;
+        }
+
         public void TryToStuck()
         {
             if (_canStuck)
-                _rb.isKinematic = true;
-        }
-
-        private void ResetRigidbody(Vector3 velocity, Vector3 angularVecolity)
-        {
-            _rb.isKinematic = false;
-            _rb.angularVelocity = angularVecolity;
-            _rb.velocity = velocity;
+                ResetRigidbody(true);
         }
 
         public void Flip()
         {
             if (_canFlip)
             {
-                ResetRigidbody(_movementDirection, Vector3.zero);
+                ResetRigidbody();
+                _rb.AddForce(_movementDirection, ForceMode.Impulse);
                 _rb.AddTorque(transform.right * _flipForce, ForceMode.VelocityChange);
                 FreezeStucking();
             }
@@ -99,8 +104,8 @@ namespace _Scripts.Game.Knife
         {
             if (_canFlip)
             {
-                var backMovement = new Vector3(0, _movementDirection.y / 2, -_movementDirection.z);
-                ResetRigidbody(backMovement, Vector3.zero);
+                ResetRigidbody();
+                _rb.AddForce(_backMovement, ForceMode.Impulse);
                 _rb.AddTorque(-transform.right * _flipForce, ForceMode.VelocityChange);
             }
         }
@@ -110,7 +115,7 @@ namespace _Scripts.Game.Knife
             _canFlip = false;
             _inputService.OnTouched -= Flip;
             _rb.useGravity = false;
-            ResetRigidbody(Vector3.zero, Vector3.zero);
+            ResetRigidbody(true);
             _rb.constraints = RigidbodyConstraints.None;
         }
     }
